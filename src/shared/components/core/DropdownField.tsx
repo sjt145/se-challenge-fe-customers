@@ -1,12 +1,12 @@
 import React, {CSSProperties} from "react";
 
 type Props = {
-  name: string,
+  name: string;
   value?: string;
-  defaultValue?: string
+  defaultValue?: string;
   onChange: (event: any) => void;
-  style?: CSSProperties
-  options: string[] | number[]
+  style?: CSSProperties;
+  options: string[] | number[];
 };
 
 export const DropdownField = (props: Props) => {
@@ -14,7 +14,7 @@ export const DropdownField = (props: Props) => {
 
   const finalOptions = defaultValue ? [defaultValue, ...options] : options;
 
-  const onValueChange = (event) => {
+  const onValueChange = event => {
     const {name, value} = event.target;
     onChange({
       target: {
@@ -22,15 +22,19 @@ export const DropdownField = (props: Props) => {
         value: value === defaultValue ? "" : value
       }
     });
-  }
+  };
 
   return (
     <span>
       <select name={name} onChange={onValueChange} style={style}>
         {finalOptions.map((item, index) => {
-          return <option key={index} defaultValue={finalOptions[0]} value={item}>{item}</option>
+          return (
+            <option key={index} defaultValue={finalOptions[0]} value={item}>
+              {item}
+            </option>
+          );
         })}
       </select>
     </span>
-  )
+  );
 };

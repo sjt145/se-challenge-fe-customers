@@ -1,7 +1,7 @@
 import {ObjOfCss} from "@/app-types";
-import {Grid, Paper, Typography} from "@mui/material";
+import {Grid, Typography} from "@mui/material";
 import React from "react";
-import {Col} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {FormConstants} from "../../waveConstant/FormConstants";
 import {QuestionText} from "@/shared/components";
 
@@ -12,7 +12,7 @@ type Props = {
 const CustomerList = (props: Props) => {
   return (
     <Col xs={12} md={6} lg={6} className="mb-3" style={styles.colContainer}>
-      <Paper elevation={5} style={styles.paperContainer}>
+      <Row style={styles.paperContainer}>
         <Typography variant="h6" gutterBottom style={styles.lableStyle}>
           Customer Details
         </Typography>
@@ -66,7 +66,7 @@ const CustomerList = (props: Props) => {
             </Typography>
           </Grid>
         </Grid>
-      </Paper>
+      </Row>
     </Col>
   );
 };
@@ -74,7 +74,7 @@ export default CustomerList;
 
 const styles: ObjOfCss = {
   colContainer: {
-    maxWidth: 500,
+    maxWidth: 600,
     flex: "1 1 100%"
   },
   paperContainer: {

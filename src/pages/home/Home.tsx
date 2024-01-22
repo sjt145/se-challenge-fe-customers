@@ -1,11 +1,11 @@
 import React from "react";
-import CustomerDetails from "@/pages/form/wave/customerForm/CustomerDetails";
+import CustomerMain from "@/pages/form/wave/customerForm/CustomerMain";
 import {ObjOfCss} from "@/app-types";
 
 export const Home = () => {
   return (
     <div style={styles.container}>
-      <CustomerDetails />
+      <CustomerMain />
     </div>
   );
 };

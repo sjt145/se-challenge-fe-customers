@@ -26,7 +26,7 @@ interface Customer {
   country: string;
 }
 
-const CustomerDetails = () => {
+const CustomerMain = () => {
   const [expanded, setExpanded] = useState<string | false>("panel1");
   const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(null);
   const [customers, setCustomers] = useState<Customer[]>([]);
@@ -144,8 +144,8 @@ const CustomerDetails = () => {
       city: undefined,
       province: undefined
     });
-    alert("  Here is a gentle confirmation that your action was successful.");
     Logger.info("Customer Data Log:", formState);
+    alert("  Here is a gentle confirmation that your action was successful.");
   };
 
   const fetchCustomerData = async () => {
@@ -209,7 +209,7 @@ const CustomerDetails = () => {
   );
 };
 
-export default CustomerDetails;
+export default CustomerMain;
 const styles: ObjOfCss = {
   container: {
     background: "#f3f3fe",
@@ -224,8 +224,7 @@ const styles: ObjOfCss = {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
-    marginLeft: 80
+    justifyContent: "center"
   },
   listContainer: {
     width: "80vw",

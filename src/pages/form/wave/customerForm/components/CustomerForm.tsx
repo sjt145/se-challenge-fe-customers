@@ -112,7 +112,9 @@ const styles: ObjOfCss = {
   },
   colContainer: {
     maxWidth: 600,
-    flex: "1 1 100%"
+    flex: "1 1 100%",
+    marginTop: 10,
+    marginBottom: 10
   },
   inputColStyle: {
     marginBottom: "8px"
@@ -128,7 +130,7 @@ const styles: ObjOfCss = {
   formBody: {
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: "2%"
+    padding: "6%"
   },
   inputLabel: {
     color: FormConstants.styles.inputLabelColor
@@ -137,7 +139,7 @@ const styles: ObjOfCss = {
     border: "1px solid " + FormConstants.styles.inputBorderColor,
     fontSize: "1em",
     padding: "1.5%",
-    width: "95%"
+    width: "100%"
   },
   dropdownStyles: {
     border: "1px solid " + FormConstants.styles.inputBorderColor,
