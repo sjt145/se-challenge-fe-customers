@@ -12,6 +12,7 @@ import Api from "@/http/api";
 import Accordion from "@/shared/components/core/Accordion/Accordion";
 import AccordionSummary from "@/shared/components/core/Accordion/AccordionSummary";
 import AccordionDetails from "@/shared/components/core/Accordion/AccordionDetails";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 interface Customer {
   id: number;
@@ -143,6 +144,7 @@ const CustomerDetails = () => {
       city: undefined,
       province: undefined
     });
+    alert("  Here is a gentle confirmation that your action was successful.");
     Logger.info("Customer Data Log:", formState);
   };
 
@@ -191,10 +193,11 @@ const CustomerDetails = () => {
         {customers.map(customer => (
           <Accordion key={customer.id} expanded={expanded === `panel${customer.id}`} onChange={handleAccordianChange(`panel${customer.id}`, customer)}>
             <AccordionSummary aria-controls={`panel${customer.id}d-content`} id={`panel${customer.id}d-header`}>
-              <Typography>{customer.name}</Typography>
+              <AccountCircleIcon />
+              <Typography sx={{ml: 1}}>{customer.name}</Typography>
             </AccordionSummary>
             <AccordionDetails style={styles.formContainer}>
-              <Container style={{display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center"}}>
+              <Container style={styles.mainContainerStyle}>
                 <CustomerList costumer={customer} />
                 <CustomerForm handleSubmit={handleSubmit} handleInputChange={handleInputChange} formState={formState} fieldErrors={fieldErrors} />
               </Container>
@@ -217,13 +220,21 @@ const styles: ObjOfCss = {
     alignItems: "center",
     paddingTop: "20px"
   },
+  mainContainerStyle: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    marginLeft: 80
+  },
   listContainer: {
     width: "80vw",
     padding: 0
   },
   formContainer: {
     border: "1px solid #EEEEEE",
-    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+    background: "linear-gradient(to bottom, #ffffff, #e0e0e0)"
   },
   logo: {
     width: "100%",

@@ -2,10 +2,10 @@ export const FormConstants = {
   styles: {
     bgColor: "#FFFFF0",
     logoUrl: "https://waveaccounting.github.io/se-challenge-fe-customers/assets/img/wave.svg",
-    inputLabelColor: "#025393",
-    inputBorderColor: "#008080",
+    inputLabelColor: "#696969",
+    inputBorderColor: "#d3d3d3",
     addMemberBtnBgColor: "#008080",
-    submitBtnColor: "#843179"
+    submitBtnColor: "#389bd9"
   },
   FILE_SIZE_IN_MB: 4,
   allowedImageFileExtensions: ["jpg", "jpeg", "png", "bmp", "heic", "avif"],

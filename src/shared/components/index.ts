@@ -16,3 +16,4 @@ export * from "./core/Text";
 export * from "./core/Accordion/Accordion";
 export * from "./core/Accordion/AccordionSummary";
 export * from "./core/Accordion/AccordionDetails";
+export * from "./core/SimpleAlert";
