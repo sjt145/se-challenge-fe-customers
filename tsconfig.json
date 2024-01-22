@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "ES2020",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "es2017"
+    ],
+    "allowJs": true,
+    "jsx": "react",
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    // compilation options
+    "allowSyntheticDefaultImports": true,
+    "checkJs": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    // for printing errors in pretty format
+    "pretty": true,
+    // declaration config,
+    "declaration": true,
+    "declarationDir": "./build/@types",
+    "declarationMap": true,
+    // output
+    "outDir": "./build/",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "exclude": [
+    "build",
+    "dist",
+    "config",
+    "node_modules",
+    "webpack-config"
+  ]
+}
